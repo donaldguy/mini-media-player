@@ -1,5 +1,7 @@
-import { LitElement, html, css } from 'lit-element';
-import { classMap } from 'lit-html/directives/class-map';
+import { LitElement, html, css } from 'lit';
+import { classMap } from 'lit/directives/class-map.js';
+
+import '@polymer/paper-progress/paper-progress';
 
 import convertProgress from '../utils/getProgress';
 

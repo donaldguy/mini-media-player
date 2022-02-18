@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from 'lit';
 
 class MiniMediaPlayerCheckbox extends LitElement {
   static get properties() {
@@ -11,7 +11,7 @@ class MiniMediaPlayerCheckbox extends LitElement {
 
   render() {
     return html`
-      <ha-switch 
+      <ha-switch
         .checked=${this.checked}
         ?disabled=${this.disabled}>
       </ha-switch>

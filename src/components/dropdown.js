@@ -1,4 +1,8 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from 'lit';
+
+import '@polymer/paper-item/paper-item';
+import '@polymer/paper-menu-button/paper-menu-button';
+import '@polymer/paper-listbox/paper-listbox';
 
 import { ICON } from '../const';
 

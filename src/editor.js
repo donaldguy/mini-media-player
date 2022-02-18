@@ -1,6 +1,12 @@
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from 'lit';
+
+import '@polymer/paper-dropdown-menu/paper-dropdown-menu';
+import '@polymer/paper-input/paper-input';
+import '@polymer/paper-listbox/paper-listbox';
+
 import style from './style';
 import defaultConfig from './utils/config';
+
 
 const fireEvent = (node, type, detail = {}, options = {}) => {
   const event = new Event(type, {
@@ -81,14 +87,14 @@ export default class MiniMediaPlayerEditor extends LitElement {
     return html`
       <div class='card-config'>
         <div class='overall-config'>
-  
+
           <paper-dropdown-menu
             label="Entity (required)"
             .configValue="${'entity'}"
             @value-changed=${this.valueChanged}
             >
             <paper-listbox
-              slot="dropdown-content" 
+              slot="dropdown-content"
               .selected="${this.getMediaPlayerEntities.indexOf(this._config.entity)}"
             >
               ${this.getMediaPlayerEntities.map(entity => html`<paper-item>${entity}</paper-item>`)}
@@ -136,7 +142,7 @@ export default class MiniMediaPlayerEditor extends LitElement {
               ></ha-switch>
             </ha-formfield>
           </div>
-          
+
           <div class="side-by-side">
             <paper-dropdown-menu
               label="Artwork"

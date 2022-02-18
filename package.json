@@ -16,9 +16,21 @@
   "repository": "git@github.com:kalkih/mini-media-player.git",
   "author": "Karl Kihlström <mrkihlstrom@gmail.com>",
   "license": "MIT",
+  "//": [
+    "lit version pins selected to match",
+    "https://github.com/home-assistant/frontend/blob/cbd0ef6b651432f6f654222db3c0785b0d48b2aa/package.json#L242-L244"
+  ],
   "dependencies": {
-    "lit-element": "^2.3.1",
-    "lit-html": "^1.2.1",
+    "@polymer/paper-dropdown-menu": "^3.2.0",
+    "@polymer/paper-input": "^3.2.1",
+    "@polymer/paper-item": "^3.0.1",
+    "@polymer/paper-listbox": "^3.0.1",
+    "@polymer/paper-menu-button": "^3.0.1",
+    "@polymer/paper-progress": "^3.0.1",
+    "@polymer/paper-ripple": "^3.0.1",
+    "lit": "^2.1.2",
+    "lit-html": "2.1.2",
+    "lit-element": "3.1.2",
     "node-vibrant": "^3.1.5",
     "resize-observer-polyfill": "^1.5.1"
   },
@@ -35,8 +47,17 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "2.16.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-manifest-plugin": "^4.0.2"
+  },
+  "resolutions": {
+    "@polymer/polymer": "patch:@polymer/polymer@3.4.1#./.yarn/patches/@polymer/polymer/pr-5569.patch",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "lit": "^2.1.2",
+    "lit-html": "2.1.2",
+    "lit-element": "3.1.2",
+    "@lit/reactive-element": "1.2.1"
   },
   "scripts": {
     "build": "npm run lint && npm run webpack && npm run babel",

@@ -1,4 +1,5 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from 'lit';
+import '@polymer/paper-input/paper-input';
 
 import t from '../utils/translation';
 
